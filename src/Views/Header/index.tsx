@@ -15,7 +15,7 @@ const Header = () => {
         </h1>
       </nav>
       <nav className="flex h-full w-[90%]">
-        <ul className="flex h-full w-full flex-row items-center justify-end gap-8 pr-[1.5em]">
+        <ul className="flex h-full w-full flex-row items-center justify-end gap-[2em] pr-[1.5em]">
           {headerList?.map((items, index) => {
             return (
               <li key={index}>

@@ -28,6 +28,8 @@ const FilterSection = () => {
             <React.Fragment key={index}>
               <SwitchElements
                 type={items?.type}
+                inputWidth={items?.inputWidth}
+                iconContainerWidth={items?.iconContainerWidth}
                 placeholder={items?.placeholder}
                 optionsMenu={items?.optionsMenu}
                 inputContainerClassName={items?.inputContainerClassName}

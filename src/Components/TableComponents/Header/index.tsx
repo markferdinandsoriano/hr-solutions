@@ -7,8 +7,8 @@ const TableHeader = ({
   headers: { [key: string]: unknown }[];
 }) => {
   return (
-    <thead className="w-full rounded-2xl border-[2px] border-lightgray text-left">
-      <tr className="flex w-full flex-row items-center border-lightgray pl-[0.8em] text-left">
+    <thead className="w-full rounded-2xl border-lightgray text-left">
+      <tr className="flex w-full flex-row items-center border-[1px] border-lightgray py-[0.8em] pl-[0.8em] text-left">
         {headers?.map((items, index) => {
           return (
             <React.Fragment key={index}>
@@ -19,12 +19,6 @@ const TableHeader = ({
                 styles={items?.styles as { [key: string]: unknown }}
               />
             </React.Fragment>
-            // <th
-            //   key={index}
-            //   className={`py-[0.8em] px-[0.8em] font-bold text-announcement ${items?.className}`}
-            // >
-            //   {items?.header as string}
-            // </th>
           );
         })}
       </tr>

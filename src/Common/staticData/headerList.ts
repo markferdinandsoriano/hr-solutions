@@ -47,7 +47,7 @@ const HeaderListComponents = () => {
       placeholder: "employee search",
       type: "input",
       className:
-        "outline-none border-b-4 border-placeholder bg-headerBg text-headerTextColor text-center pb-2 w-auto placeholder:text-xl",
+        "outline-none border-b-4 border-placeholder bg-headerBg text-headerTextColor text-center pb-2 w-[180px] placeholder:text-lg",
     },
     {
       name: "search",
