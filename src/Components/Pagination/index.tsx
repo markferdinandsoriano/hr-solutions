@@ -1,4 +1,3 @@
-import React from "react";
 import ForwardPlayIcons from "src/Components/PlayForwardStep";
 import TextField from "src/Components/TextField";
 
@@ -36,7 +35,7 @@ const Pagination = () => {
           of 1
         </h2>
       </div>
-      <div className="flex w-auto flex-row gap-4">
+      <div className="flex w-auto flex-row-reverse gap-4">
         <ForwardPlayIcons
           forwardStepStyle={{
             color: iconColors,
