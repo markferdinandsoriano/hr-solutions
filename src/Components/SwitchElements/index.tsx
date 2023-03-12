@@ -1,7 +1,12 @@
 import TextField from "src/Components/TextField";
 import SelectField from "src/Components/SelectField";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretDown,
+  faBookmark,
+  faMobileScreenButton,
+  faCircleInfo,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SwitchElemets = ({
   type,
@@ -56,6 +61,60 @@ const SwitchElemets = ({
 
     case "circle":
       return <FontAwesomeIcon icon="circle" style={{ ...styles }} />;
+
+    case "bookmark":
+      return (
+        <td>
+          <FontAwesomeIcon icon={faBookmark} style={{ ...styles }} />
+        </td>
+      );
+
+    case "mobile":
+      return (
+        <td
+          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+        >
+          <FontAwesomeIcon icon={faMobileScreenButton} style={{ ...styles }} />
+        </td>
+      );
+
+    case "bookmark mobile":
+      return (
+        <td
+          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+        >
+          <FontAwesomeIcon icon={faBookmark} style={{ ...styles }} />
+
+          <FontAwesomeIcon icon={faMobileScreenButton} style={{ ...styles }} />
+        </td>
+      );
+    case "normaltext":
+      return (
+        <td
+          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+        >
+          {label}
+        </td>
+      );
+    case "dateTime":
+      return (
+        <td
+          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+        >
+          {label}
+        </td>
+      );
+
+    case "info":
+      console.log("infoo", styles);
+      return (
+        <td
+          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+        >
+          <h1>{label}</h1>
+          <FontAwesomeIcon icon={faCircleInfo} style={{ ...styles }} />
+        </td>
+      );
 
     default:
       return (
