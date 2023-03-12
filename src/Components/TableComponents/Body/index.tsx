@@ -16,7 +16,7 @@ const TableBody = ({
           return (
             <tr
               key={index}
-              className="rounded-lg border-[1px] border-lightgray px-[1em] text-left"
+              className="flex flex-row items-center border-[1px] border-lightgray pl-[0.8em] text-left"
             >
               {headers?.map((headerItems, index) => {
                 return (

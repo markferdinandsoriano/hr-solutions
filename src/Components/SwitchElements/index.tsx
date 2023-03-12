@@ -64,55 +64,74 @@ const SwitchElemets = ({
 
     case "bookmark":
       return (
-        <td>
-          <FontAwesomeIcon icon={faBookmark} style={{ ...styles }} />
+        <td
+          className={`flex  flex-row items-center text-left font-semibold  ${textClassName}`}
+        >
+          <FontAwesomeIcon icon={faBookmark} style={{ color: "#000000" }} />
         </td>
       );
 
     case "mobile":
       return (
         <td
-          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+          className={`flex flex-row items-center text-left font-semibold ${textClassName}`}
         >
-          <FontAwesomeIcon icon={faMobileScreenButton} style={{ ...styles }} />
+          <FontAwesomeIcon
+            icon={faMobileScreenButton}
+            style={{ color: "#000000" }}
+          />
         </td>
       );
 
     case "bookmark mobile":
       return (
         <td
-          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+          className={`flex flex-row items-center gap-2 font-semibold text-textDefaultColor ${textClassName}`}
         >
-          <FontAwesomeIcon icon={faBookmark} style={{ ...styles }} />
-
-          <FontAwesomeIcon icon={faMobileScreenButton} style={{ ...styles }} />
+          <p className="font-semibold text-textDefaultColor">
+            <FontAwesomeIcon icon={faBookmark} style={{ color: "#000000" }} />
+          </p>
+          <p className="font-semibold text-textDefaultColor">
+            <FontAwesomeIcon
+              icon={faMobileScreenButton}
+              style={{ color: "#000000" }}
+            />
+          </p>
         </td>
       );
     case "normaltext":
       return (
-        <td
-          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
-        >
-          {label}
-        </td>
-      );
-    case "dateTime":
-      return (
-        <td
-          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
-        >
+        <td className={`font-bold text-textDefaultColor ${textClassName}`}>
           {label}
         </td>
       );
 
+    case "headerText":
+      return (
+        <td className={`font-medium text-lightBlack ${textClassName}`}>
+          {label}
+        </td>
+      );
+    case "dateTime":
+      const labelSplit = label?.split(",");
+      return (
+        <td className={`${textClassName}`}>
+          <p className="font-semibold text-textDefaultColor">
+            {labelSplit?.[0]}
+          </p>
+          <p className="font-extrabold text-gray">{labelSplit?.[1]}</p>
+        </td>
+      );
+
     case "info":
-      console.log("infoo", styles);
       return (
         <td
-          className={`py-[0.8em] px-[0.8em] font-semibold text-textDefaultColor ${textClassName}`}
+          className={`flex flex-row items-center gap-4 font-medium text-lightBlack ${textClassName}`}
         >
           <h1>{label}</h1>
-          <FontAwesomeIcon icon={faCircleInfo} style={{ ...styles }} />
+          <span>
+            <FontAwesomeIcon icon={faCircleInfo} style={{ ...styles }} />
+          </span>
         </td>
       );
 
