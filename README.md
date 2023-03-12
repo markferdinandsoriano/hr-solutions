@@ -1,1 +1,1 @@
-# hr-solutions
+# Sprout Solutions HR Table UI clone
