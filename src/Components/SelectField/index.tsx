@@ -10,6 +10,9 @@ const SelectField = ({
   key,
   inputContainerClassName,
   inputClassName,
+  iconSize,
+  iconContainerWidth,
+  inputWidth,
 }: {
   label?: string;
   optionsMenu?: { [key: string]: unknown }[];
@@ -18,6 +21,9 @@ const SelectField = ({
   key?: number | string;
   inputContainerClassName?: string;
   inputClassName?: string;
+  iconSize?: { [key: string]: unknown };
+  iconContainerWidth?: string;
+  inputWidth?: string;
 }) => {
   const [openMenu, setOpen] = React.useState<boolean>(false);
 
@@ -30,7 +36,7 @@ const SelectField = ({
       >
         <input
           disabled
-          className={`w-[95%] outline-none placeholder:font-bold`}
+          className={`${inputWidth} outline-none placeholder:font-bold`}
           placeholder={placeholder}
           name={name}
         />
@@ -39,14 +45,15 @@ const SelectField = ({
           style={{
             color: "rgba(102,122,115,255)",
             transform: `${openMenu ? "rotate(180deg)" : "rotate(0deg)"}`,
-            width: "5%",
+            width: `${iconContainerWidth}`,
+            fontSize: `${iconSize}`,
           }}
         />
       </div>
       <ul
         className={`${
           openMenu
-            ? "absolute block w-full overflow-y-auto border-[1px] border-textDefaultColor bg-white pl-[0.4em] text-textDefaultColor"
+            ? "absolute block h-[10svh] w-full overflow-y-auto border-[1px] border-textDefaultColor bg-white pl-[0.4em] text-textDefaultColor"
             : "hidden"
         }`}
       >

@@ -19,6 +19,8 @@ const SwitchElemets = ({
   optionsMenu,
   inputContainerClassName,
   inputClassName,
+  inputWidth,
+  iconContainerWidth,
 }: {
   type?: string;
   styles?: { [key: string]: unknown };
@@ -30,6 +32,8 @@ const SwitchElemets = ({
   optionsMenu?: { [key: string]: unknown }[];
   inputContainerClassName?: string;
   inputClassName?: string;
+  inputWidth?: string;
+  iconContainerWidth?: string;
 }) => {
   switch (type) {
     case "input":
@@ -47,6 +51,8 @@ const SwitchElemets = ({
       return (
         <SelectField
           placeholder={placeholder}
+          inputWidth={inputWidth}
+          iconContainerWidth={iconContainerWidth}
           optionsMenu={optionsMenu}
           inputContainerClassName={inputContainerClassName}
           inputClassName={inputClassName}
