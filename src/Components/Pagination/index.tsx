@@ -6,16 +6,18 @@ const Pagination = () => {
   const iconColors = "#506860";
 
   return (
-    <section className="flex w-full flex-row items-center justify-center gap-6">
+    <section className="flex w-[100svh] flex-row items-center justify-center gap-6">
       <div className="flex w-auto flex-row gap-4">
         <ForwardPlayIcons
           forwardStepStyle={{
             transform: "rotate(180deg)",
             color: iconColors,
+            cursor: "pointer",
           }}
           playStyle={{
             transform: "rotate(180deg)",
             color: iconColors,
+            cursor: "pointer",
           }}
         />
       </div>
@@ -38,8 +40,9 @@ const Pagination = () => {
         <ForwardPlayIcons
           forwardStepStyle={{
             color: iconColors,
+            cursor: "pointer",
           }}
-          playStyle={{ color: iconColors }}
+          playStyle={{ color: iconColors, cursor: "pointer" }}
         />
       </div>
     </section>
