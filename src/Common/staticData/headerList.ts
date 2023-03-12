@@ -4,6 +4,12 @@ const iconsStyle = {
   marginBottom: "0.2em",
   cursor: "pointer",
 };
+const headerIconStyle = {
+  fontSize: "1.6vw",
+  cursor: "pointer",
+};
+
+const fonSize = "text-[clamp(1vw,1vw,1vw)]";
 
 const HeaderListComponents = () => {
   const headerList = [
@@ -12,50 +18,49 @@ const HeaderListComponents = () => {
       name: "myRequest",
       type: "text",
       styles: iconsStyle,
-      textClassName: "h-full text-xl text-headerTextColor",
+      textClassName: `h-full ${fonSize} text-headerTextColor`,
     },
     {
       label: "My Team",
       name: "myTeam",
       type: "text",
       styles: iconsStyle,
-      textClassName: "h-full text-xl text-headerTextColor",
+      textClassName: `h-full ${fonSize} text-headerTextColor`,
     },
     {
       label: "Company",
       name: "company",
       type: "text",
       styles: iconsStyle,
-      textClassName: "h-full text-xl text-headerTextColor",
+      textClassName: `h-full ${fonSize} text-headerTextColor`,
     },
     {
       label: "Administration Tools",
       name: "administration",
       type: "text",
       styles: iconsStyle,
-      textClassName: "h-full text-xl text-headerTextColor",
+      textClassName: `h-full  ${fonSize} text-headerTextColor`,
     },
     {
       label: "Maintenance",
       name: "maintenance",
       type: "text",
       styles: iconsStyle,
-      textClassName: "h-full text-xl text-headerTextColor",
+      textClassName: `h-full  ${fonSize} text-headerTextColor`,
     },
     {
       name: "employeeSearch",
       placeholder: "employee search",
       type: "input",
       className:
-        "outline-none border-b-4 border-placeholder bg-headerBg text-headerTextColor text-center pb-2 w-[180px] placeholder:text-lg",
+        "outline-none border-b-4 border-placeholder bg-headerBg text-headerTextColor text-center pb-2 w-[180px] placeholder:text-[1vw] max-[1440px]:w-[100px] max-[1440px]:placeholder:text-[12px]",
     },
     {
       name: "search",
       type: "search",
       styles: {
         color: "rgba(80,80,80,255)",
-        fontSize: "30px",
-        cursor: "pointer",
+        ...headerIconStyle,
       },
     },
     {
@@ -63,8 +68,7 @@ const HeaderListComponents = () => {
       type: "bell",
       styles: {
         color: "rgba(80,80,80,255)",
-        fontSize: "30px",
-        cursor: "pointer",
+        ...headerIconStyle,
       },
     },
     {
@@ -72,8 +76,7 @@ const HeaderListComponents = () => {
       type: "circle",
       styles: {
         color: "rgba(219,219,219,255)",
-        fontSize: "30px",
-        cursor: "pointer",
+        ...headerIconStyle,
       },
     },
     {
@@ -81,16 +84,11 @@ const HeaderListComponents = () => {
       label: "Admin",
       type: "text",
       styles: iconsStyle,
-      textClassName: "h-full text-xl text-sentThru",
+      textClassName: `h-full  ${fonSize} text-sentThru`,
     },
   ];
 
   return headerList;
 };
-
-// border: "none",
-// outline: "none",
-// borderBottom: "4px solid rgba(80,80,80,255)",
-// backgroundColor: "rgba(52,52,52,255)",
 
 export default HeaderListComponents;

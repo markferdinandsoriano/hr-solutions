@@ -7,7 +7,7 @@ const TableHeader = ({
   headers: { [key: string]: unknown }[];
 }) => {
   return (
-    <thead className="w-full rounded-2xl border-lightgray text-left">
+    <thead className="sticky top-0 z-50 w-full rounded-2xl border-lightgray bg-white text-left">
       <tr className="flex w-full flex-row items-center border-[1px] border-lightgray py-[0.8em] pl-[0.8em] text-left">
         {headers?.map((items, index) => {
           return (
