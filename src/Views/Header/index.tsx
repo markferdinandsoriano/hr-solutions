@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderListComponents from "src/Helpers/headerList";
+import HeaderListComponents from "src/Common/staticData/headerList";
 import SwitchElements from "src/Components/SwitchElements";
 import SproutLogo from "src/assets/SproutLogo.png";
 
@@ -23,7 +23,7 @@ const Header = () => {
                   type={items?.type}
                   placeholder={items?.placeholder}
                   label={items?.label}
-                  className={items?.className}
+                  inputClassName={items?.className}
                   styles={items?.styles}
                   textClassName={items?.textClassName}
                 />
