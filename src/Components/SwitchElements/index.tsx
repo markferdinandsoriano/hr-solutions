@@ -1,25 +1,52 @@
 import TextField from "src/Components/TextField";
+import SelectField from "src/Components/SelectField";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const SwitchElemets = ({
   type,
-  className,
   styles,
   label,
   placeholder,
   textClassName,
+  withIcon,
+  iconStyle,
+  optionsMenu,
+  inputContainerClassName,
+  inputClassName,
 }: {
   type?: string;
-  className?: string | undefined;
   styles?: { [key: string]: unknown };
   label?: string;
   placeholder?: string;
   textClassName?: string;
+  withIcon?: boolean;
+  iconStyle?: { [key: string]: unknown };
+  optionsMenu?: { [key: string]: unknown }[];
+  inputContainerClassName?: string;
+  inputClassName?: string;
 }) => {
   switch (type) {
     case "input":
-      return <TextField className={className} placeholder={placeholder} />;
+      return (
+        <TextField
+          inputContainerClassName={inputContainerClassName}
+          inputClassName={inputClassName}
+          placeholder={placeholder}
+          withIcon={withIcon}
+          iconStyle={{ ...iconStyle }}
+        />
+      );
+
+    case "select":
+      return (
+        <SelectField
+          placeholder={placeholder}
+          optionsMenu={optionsMenu}
+          inputContainerClassName={inputContainerClassName}
+          inputClassName={inputClassName}
+        />
+      );
 
     case "search":
       return <FontAwesomeIcon icon="search" style={{ ...styles }} />;
