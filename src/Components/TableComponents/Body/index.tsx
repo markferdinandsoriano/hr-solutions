@@ -10,7 +10,7 @@ const TableBody = ({
   bodyData: { [key: string]: unknown }[];
 }) => {
   return (
-    <tbody className="rounded-lg border-lightgray px-[1em] text-left">
+    <tbody className="z-0 overflow-x-auto overflow-y-auto rounded-lg border-lightgray px-[1em] text-left">
       {bodyData &&
         bodyData?.map((Bodyitems, index) => {
           return (

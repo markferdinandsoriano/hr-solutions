@@ -7,12 +7,12 @@ import tableBodyData from "src/Common/staticData/tableBodyData";
 
 const MainTable = () => {
   return (
-    <section className="h-[78%] w-full pt-[2em]">
-      <table className="h-auto w-full">
+    <section className="z-50 mt-[2em] h-[78%] w-full overflow-y-auto">
+      <table className="h-auto w-full overflow-x-auto overflow-y-auto bg-white">
         <TableHeader headers={tableHeaderListData} />
         <TableBody headers={tableHeaderListData} bodyData={tableBodyData} />
+        <TableFooter />
       </table>
-      <TableFooter />
     </section>
   );
 };

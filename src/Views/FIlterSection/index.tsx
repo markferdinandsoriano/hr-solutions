@@ -7,7 +7,7 @@ import SwitchElements from "src/Components/SwitchElements";
 const FilterSection = () => {
   return (
     <section className="flex h-[7%] w-full flex-row items-end justify-end">
-      <div className="flex-ro flex w-[60%] gap-3">
+      <div className="flex w-[60%] flex-row gap-3">
         {statusList?.map((items, index) => {
           return (
             <React.Fragment key={`${index}-${items?.label}`}>

@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderListComponents from "src/Common/staticData/headerList";
 import SwitchElements from "src/Components/SwitchElements";
 import SproutLogo from "src/assets/SproutLogo.png";
@@ -6,8 +5,8 @@ import SproutLogo from "src/assets/SproutLogo.png";
 const Header = () => {
   const headerList = HeaderListComponents();
   return (
-    <header className="flex h-[10%] w-[100%] flex-row items-center justify-start bg-headerBg pl-[2%]">
-      <nav className="flex h-full w-[10%] flex-row items-center justify-center">
+    <header className="flex h-[10%] w-[100%] flex-row items-center justify-start bg-headerBg">
+      <nav className="ml-[2.5em] flex h-full w-[10%] flex-row items-center justify-center">
         <img src={SproutLogo} width={120} height={120} />
         <div className="ml-[0.5em] h-[45%] w-0 border-2 border-solid border-placeholder"></div>
         <h1 className="ml-[0.3em] text-[2.5em] font-light text-headerTextColor">

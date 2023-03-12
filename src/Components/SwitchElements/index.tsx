@@ -143,7 +143,7 @@ const SwitchElemets = ({
 
     default:
       return (
-        <span className="flex h-auto w-full flex-row items-center justify-start gap-2">
+        <span className="flex h-auto w-[100%] flex-row items-center justify-start gap-2">
           <h1 className={`${textClassName}`}>{label}</h1>
           <FontAwesomeIcon
             icon={faCaretDown}
