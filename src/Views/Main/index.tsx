@@ -4,7 +4,7 @@ import MainTable from "src/Views/Table";
 
 const Main = () => {
   return (
-    <main className="b h-[92%] w-[93%]">
+    <main className="b flex h-[92%] w-[93%] flex-col">
       <Announcements />
       <FilterSection />
       <MainTable />

@@ -22,6 +22,7 @@ module.exports = {
       gray: "#B2B2B2",
       lightgray: "#E8E2E2",
       lightBlack: "#1A120B",
+      semiLightGray: "#B2B2B2",
     },
   },
   plugins: [],
